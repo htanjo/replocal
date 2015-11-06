@@ -1,0 +1,23 @@
+{
+  "name": "replocal",
+  "version": "0.1.0",
+  "description": "Proxy for replacing web contents with local files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htanjo/replocal.git"
+  },
+  "keywords": [
+    "proxy",
+    "cli"
+  ],
+  "author": "Hiroyuki Tanjo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/htanjo/replocal/issues"
+  },
+  "homepage": "https://github.com/htanjo/replocal#readme"
+}
