@@ -15,7 +15,7 @@ function exec(program) {
 
   var options = {
     hostname: program.args[0],
-    path: program.args[1],
+    docroot: program.args[1],
     port: program.port
   };
 
