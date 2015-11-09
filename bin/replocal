@@ -3,7 +3,7 @@
 
 var program = require('commander');
 var chalk = require('chalk');
-var replocal = require('../lib');
+var Replocal = require('../lib');
 var pkg = require('../package.json');
 
 function exec(program) {
@@ -19,7 +19,7 @@ function exec(program) {
     port: program.port
   };
 
-  replocal(options);
+  new Replocal(options);
 
 };
 
