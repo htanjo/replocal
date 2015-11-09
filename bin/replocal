@@ -31,7 +31,7 @@ program
     '  Your current working directory will be mapped to document root by default.',
     '  If you want to change document root, set <directory> argument.'
   ].join('\n  '))
-  .option('--port <number>', 'port number of proxy server (default: 8888)', parseInt);
+  .option('-p, --port <number>', 'port number of proxy server (default: 8888)', parseInt);
 
 program.on('--help', function () {
   console.log('  Examples:');
