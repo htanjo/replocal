@@ -7,7 +7,7 @@
     "replocal": "bin/replocal"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,11 @@
     "commander": "^2.9.0",
     "hoxy": "^3.1.3",
     "lodash.merge": "^3.3.2"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.3",
+    "q": "^1.4.1",
+    "request": "^2.65.0"
   }
 }
