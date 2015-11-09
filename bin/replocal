@@ -26,7 +26,16 @@ program
   .usage('[options] <hostname>')
   .version(pkg.version)
   .option('--path <directory>', 'directory for mapping to document root (default: process.cwd())')
-  .option('--port <number>', 'port number of proxy server (default: 8888)', parseInt)
-  .parse(process.argv);
+  .option('--port <number>', 'port number of proxy server (default: 8888)', parseInt);
+
+program.on('--help', function () {
+  console.log('  Examples:');
+  console.log('');
+  console.log('    $ replocal example.com');
+  console.log('    $ replocal --port=9999 --path=path/to/docroot example.com');
+  console.log('');
+});
+
+program.parse(process.argv);
 
 exec(program);
