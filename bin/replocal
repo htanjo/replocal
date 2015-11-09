@@ -2,13 +2,14 @@
 'use strict';
 
 var program = require('commander');
+var chalk = require('chalk');
 var replocal = require('../lib');
 var pkg = require('../package.json');
 
 function exec(program) {
 
   if (!program.args.length) {
-    console.error('No <hostname> specified');
+    console.error(chalk.red('No <hostname> specified'));
     program.help();
   }
 
@@ -27,8 +28,8 @@ program
   .usage('[options] <hostname> [<directory>]')
   .description([
     '  Start proxy server for replacing web contents with local files.',
-    '  Your current directory will be mapped to document root by default.',
-    '  If you want to change document root, specify <directory> argument.'
+    '  Your current working directory will be mapped to document root by default.',
+    '  If you want to change document root, set <directory> argument.'
   ].join('\n  '))
   .option('--port <number>', 'port number of proxy server (default: 8888)', parseInt);
 
