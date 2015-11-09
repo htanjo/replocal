@@ -14,7 +14,7 @@ function exec(program) {
 
   var options = {
     hostname: program.args[0],
-    path: program.path,
+    path: program.args[1],
     port: program.port
   };
 
@@ -23,16 +23,20 @@ function exec(program) {
 };
 
 program
-  .usage('[options] <hostname>')
   .version(pkg.version)
-  .option('--path <directory>', 'directory for mapping to document root (default: process.cwd())')
+  .usage('[options] <hostname> [<directory>]')
+  .description([
+    '  Start proxy server for replacing web contents with local files.',
+    '  Your current directory will be mapped to document root by default.',
+    '  If you want to change document root, specify <directory> argument.'
+  ].join('\n  '))
   .option('--port <number>', 'port number of proxy server (default: 8888)', parseInt);
 
 program.on('--help', function () {
   console.log('  Examples:');
   console.log('');
   console.log('    $ replocal example.com');
-  console.log('    $ replocal --port=9999 --path=path/to/docroot example.com');
+  console.log('    $ replocal --port=9999 example.com path/to/docroot');
   console.log('');
 });
 
