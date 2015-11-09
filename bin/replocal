@@ -2,11 +2,31 @@
 'use strict';
 
 var program = require('commander');
-var cli = require('../lib/cli');
+var replocal = require('../lib');
 var pkg = require('../package.json');
 
+function exec(program) {
+
+  if (!program.args.length) {
+    console.error('No <hostname> specified');
+    program.help();
+  }
+
+  var options = {
+    hostname: program.args[0],
+    path: program.path,
+    port: program.port
+  };
+
+  replocal(options);
+
+};
+
 program
+  .usage('[options] <hostname>')
   .version(pkg.version)
+  .option('--path <directory>', 'directory for mapping to document root (default: process.cwd())')
+  .option('--port <number>', 'port number of proxy server (default: 8888)', parseInt)
   .parse(process.argv);
 
-cli(program);
+exec(program);
