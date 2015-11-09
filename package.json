@@ -2,7 +2,10 @@
   "name": "replocal",
   "version": "0.1.0",
   "description": "Proxy for replacing web contents with local files.",
-  "main": "index.js",
+  "main": "lib",
+  "bin": {
+    "replocal": "bin/replocal"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/htanjo/replocal/issues"
   },
-  "homepage": "https://github.com/htanjo/replocal#readme"
+  "homepage": "https://github.com/htanjo/replocal#readme",
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
 }

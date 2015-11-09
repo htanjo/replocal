@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+'use strict';
+
+var program = require('commander');
+var cli = require('../lib/cli');
+var pkg = require('../package.json');
+
+program
+  .version(pkg.version)
+  .parse(process.argv);
+
+cli(program);
