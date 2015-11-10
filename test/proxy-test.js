@@ -43,7 +43,7 @@ describe('Proxy server', function () {
       });
     })
     .then(function (body) {
-      expect(body).to.equal('replaced?');
+      expect(body).to.equal('replaced');
     })
     .then(function () {
       replocal.close(done);
