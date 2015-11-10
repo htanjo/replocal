@@ -7,7 +7,8 @@
     "replocal": "bin/replocal"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "istanbul cover _mocha",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "engines": {
     "node": ">=0.12.0"
@@ -34,6 +35,8 @@
   },
   "devDependencies": {
     "chai": "^3.4.1",
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.0",
     "mocha": "^2.3.3",
     "q": "^1.4.1",
     "request": "^2.65.0"

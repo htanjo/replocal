@@ -3,3 +3,5 @@ sudo: false
 node_js:
   - "stable"
   - "0.12"
+after_script:
+  - npm run coveralls
