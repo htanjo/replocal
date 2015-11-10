@@ -34,7 +34,8 @@ describe('Proxy server', function () {
     Q.fcall(function () {
       return setup({
         hostname: 'example.com',
-        docroot: 'test/fixtures/basic'
+        docroot: 'test/fixtures/basic',
+        silent: true
       });
     })
     .then(function (proxy) {
