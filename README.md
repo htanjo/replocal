@@ -18,7 +18,6 @@ $ npm install -g replocal
 ### Usage
 
 ```sh
-$ cd path/to/local-docroot
 $ replocal example.com
 ```
 
