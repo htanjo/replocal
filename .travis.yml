@@ -3,4 +3,3 @@ sudo: false
 node_js:
   - "stable"
   - "0.12"
-  - "0.10"
