@@ -6,6 +6,15 @@
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![Dependency Status][deps-image]][deps-url]
 
+**Replocal** is a command line tool which runs local proxy server for web debugging.
+This proxy server intercepts HTTP requests and replaces web contents with local files.
+
+```sh
+$ replocal example.com
+```
+
+![replocal](screenshot.png)
+
 ## Getting started
 
 ### Install
