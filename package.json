@@ -6,6 +6,10 @@
   "bin": {
     "replocal": "bin/replocal"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "scripts": {
     "test": "istanbul cover _mocha",
     "test-unit": "mocha",
