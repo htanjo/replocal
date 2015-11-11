@@ -11,7 +11,8 @@
     "lib"
   ],
   "scripts": {
-    "test": "istanbul cover _mocha",
+    "test": "npm run lint && istanbul cover _mocha",
+    "lint": "jshint lib/*.js bin/* test/*.js",
     "test-unit": "mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
@@ -42,6 +43,7 @@
     "chai": "^3.4.1",
     "coveralls": "^2.11.4",
     "istanbul": "^0.4.0",
+    "jshint": "^2.8.0",
     "mocha": "^2.3.3",
     "request": "^2.65.0"
   }

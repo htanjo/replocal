@@ -22,7 +22,7 @@ function exec(program) {
 
   new Replocal(options);
 
-};
+}
 
 program
   .version(pkg.version)

@@ -1,3 +1,4 @@
+/* jshint mocha: true */
 'use strict';
 
 var expect = require('chai').expect;
@@ -185,7 +186,7 @@ describe('Proxy server', function () {
         expect(error).not.to.be.null;
         done();
       });
-    })
+    });
   });
 
 });
