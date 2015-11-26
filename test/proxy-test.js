@@ -128,6 +128,58 @@ describe('Proxy server', function () {
     });
   });
 
+  it('connects with another proxy when "upstream" option given', function (done) {
+    var replocal, upstream;
+    setup({
+      hostname: 'example.com',
+      docroot: 'test/fixtures',
+      port: 9999,
+      silent: true
+    })
+    .then(function (proxy) {
+      upstream = proxy;
+      return setup({
+        hostname: 'example.com',
+        upstream: 'localhost:9999',
+        silent: true
+      });
+    })
+    .then(function (proxy) {
+      replocal = proxy;
+      return requestBody({
+        url: 'http://example.com/',
+        proxy: 'http://localhost:8888'
+      });
+    })
+    .then(function (body) {
+      // This should be served by upstream proxy.
+      expect(body).to.equal('replaced');
+    })
+    .then(function () {
+      return requestBody({
+        url: 'http://example.com/package.json',
+        proxy: 'http://localhost:8888'
+      });
+    })
+    .then(function (body) {
+      // This should be served by replocal proxy.
+      var pkg = fs.readFileSync(path.resolve('package.json'), 'utf8');
+      expect(body).to.equal(pkg);
+    })
+    .then(function () {
+      upstream.close(function () {
+        replocal.close(done);
+      });
+    })
+    .catch(function (error) {
+      upstream.close(function () {
+        replocal.close(function () {
+          done(error);
+        });
+      });
+    });
+  });
+
   it('prints some message when start', function (done) {
     var replocal;
     mute();
