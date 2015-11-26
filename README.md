@@ -52,6 +52,9 @@ If you want to change document root, set `<directory>` argument.
 - `-p, --port <number>`  
   Port number of proxy server. (default: `8888`)
 
+- `-u, --upstream <host:port>`  
+  Another proxy between replocal and the Internet.
+
 - `--silent`  
   Print nothing to stdout.
 
@@ -64,11 +67,12 @@ If you want to change document root, set `<directory>` argument.
 ### Example
 
 ```sh
-$ replocal --port=9999 example.com path/to/docroot
+$ replocal --port 9999 --upstream proxy:8080 example.com path/to/docroot
 
 # Proxy server is running on http://localhost:9999
 #   Target website : example.com
 #   Document root  : path/to/docroot
+#   Upstream proxy : proxy:8080
 ```
 
 ## License

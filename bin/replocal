@@ -41,7 +41,7 @@ program.on('--help', function () {
   console.log('  Examples:');
   console.log('');
   console.log('    $ replocal example.com');
-  console.log('    $ replocal --port=9999 example.com path/to/docroot');
+  console.log('    $ replocal --port 9999 --upstream proxy:8080 example.com path/to/docroot');
   console.log('');
 });
 
