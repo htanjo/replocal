@@ -17,6 +17,7 @@ function exec(program) {
     hostname: program.args[0],
     docroot: program.args[1],
     port: program.port,
+    upstream: program.upstream,
     silent: program.silent
   };
 
@@ -33,6 +34,7 @@ program
     '  If you want to change document root, set <directory> argument.'
   ].join('\n  '))
   .option('-p, --port <number>', 'port number of proxy server (default: 8888)', parseInt)
+  .option('-u, --upstream <host:port>', 'another proxy between replocal and the Internet')
   .option('--silent', 'print nothing to stdout');
 
 program.on('--help', function () {
