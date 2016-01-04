@@ -76,7 +76,7 @@ $ replocal --port 9999 --upstream proxy:8080 example.com path/to/docroot
 ```
 
 ## License
-Copyright (c) 2015 Hiroyuki Tanjo. Licensed under the [MIT License](LICENSE).
+Copyright (c) 2015-2016 Hiroyuki Tanjo. Licensed under the [MIT License](LICENSE).
 
 [npm-image]: https://img.shields.io/npm/v/replocal.svg
 [npm-url]: https://www.npmjs.com/package/replocal
