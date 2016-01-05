@@ -128,7 +128,7 @@ describe('Proxy server', function () {
     });
   });
 
-  it('connects with another proxy when "upstream" option given', function (done) {
+  it('connects with upstream proxy when "upstream" option given', function (done) {
     var replocal, upstream;
     setup({
       hostname: 'example.com',

@@ -18,7 +18,8 @@ $ replocal example.com
 ## Getting started
 
 ### Install
-Install replocal CLI via npm.
+Install replocal CLI via [npm](https://www.npmjs.com/).
+Make sure you install [Node.js](https://nodejs.org/) beforehand.
 
 ```sh
 $ npm install -g replocal
@@ -30,7 +31,7 @@ $ npm install -g replocal
 $ replocal example.com
 ```
 
-Then, proxy server will start on `http://localhost:8888`.  
+Then, proxy server will start on `localhost:8888`.
 
 When you access `http://example.com/` using this proxy, the web content should be replaced with `index.html` on your current working directory.  
 If you don't have `index.html` on local, the original content will be served.
@@ -44,8 +45,8 @@ replocal [options] <hostname> [<directory>]
 ```
 
 Start proxy server for replacing web contents with local files.  
-Your current working directory will be mapped to document root by default.  
-If you want to change document root, set `<directory>` argument.
+Your current working directory will be mapped to the document root by default.  
+If you want to change the document root, set `<directory>` argument.
 
 ### Options
 
@@ -53,7 +54,7 @@ If you want to change document root, set `<directory>` argument.
   Port number of proxy server. (default: `8888`)
 
 - `-u, --upstream <host:port>`  
-  Another proxy between replocal and the Internet.
+  Upstream proxy between replocal and the Internet.
 
 - `--silent`  
   Print nothing to stdout.
@@ -69,7 +70,7 @@ If you want to change document root, set `<directory>` argument.
 ```sh
 $ replocal --port 9999 --upstream proxy:8080 example.com path/to/docroot
 
-# Proxy server is running on http://localhost:9999
+# Proxy server is running on localhost:9999
 #   Target website : example.com
 #   Document root  : path/to/docroot
 #   Upstream proxy : proxy:8080

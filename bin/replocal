@@ -30,11 +30,11 @@ program
   .usage('[options] <hostname> [<directory>]')
   .description([
     '  Start proxy server for replacing web contents with local files.',
-    '  Your current working directory will be mapped to document root by default.',
-    '  If you want to change document root, set <directory> argument.'
+    '  Your current working directory will be mapped to the document root by default.',
+    '  If you want to change the document root, set <directory> argument.'
   ].join('\n  '))
   .option('-p, --port <number>', 'port number of proxy server (default: 8888)', parseInt)
-  .option('-u, --upstream <host:port>', 'another proxy between replocal and the Internet')
+  .option('-u, --upstream <host:port>', 'upstream proxy between replocal and the Internet')
   .option('--silent', 'print nothing to stdout');
 
 program.on('--help', function () {
