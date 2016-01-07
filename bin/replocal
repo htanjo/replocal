@@ -18,6 +18,7 @@ function exec(program) {
     docroot: program.args[1],
     port: program.port,
     upstream: program.upstream,
+    network: program.network,
     silent: program.silent
   };
 
@@ -35,6 +36,7 @@ program
   ].join('\n  '))
   .option('-p, --port <number>', 'port number of proxy server (default: 8888)', parseInt)
   .option('-u, --upstream <host:port>', 'upstream proxy between replocal and the Internet')
+  .option('--network <profile>', 'network throttling. (gprs, 2g, 3g, 4g, dsl or wifi)')
   .option('--silent', 'print nothing to stdout');
 
 program.on('--help', function () {

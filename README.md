@@ -56,6 +56,9 @@ If you want to change the document root, set `<directory>` argument.
 - `-u, --upstream <host:port>`  
   Upstream proxy between replocal and the Internet.
 
+- `--network <profile>`  
+  Network throttling. (profiles: `gprs`, `2g`, `3g`, `4g`, `dsl`, `wifi`)
+
 - `--silent`  
   Print nothing to stdout.
 
@@ -68,12 +71,13 @@ If you want to change the document root, set `<directory>` argument.
 ### Example
 
 ```sh
-$ replocal --port 9999 --upstream proxy:8080 example.com path/to/docroot
+$ replocal --port 9999 --upstream proxy:8080 --network 3g example.com path/to/docroot
 
 # Proxy server is running on localhost:9999
-#   Target website : example.com
-#   Document root  : path/to/docroot
-#   Upstream proxy : proxy:8080
+#   Target website   : example.com
+#   Document root    : path/to/docroot
+#   Upstream proxy   : proxy:8080
+#   Network throttle : 3G (750kb/s, 40ms RTT)
 ```
 
 ## License
