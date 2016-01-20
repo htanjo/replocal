@@ -11,8 +11,8 @@
     "lib"
   ],
   "scripts": {
-    "test": "npm run lint && istanbul cover _mocha",
-    "lint": "jshint lib/*.js bin/* test/*.js",
+    "test": "npm run lint && istanbul cover node_modules/mocha/bin/_mocha",
+    "lint": "jshint lib bin/replocal test",
     "test-unit": "mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
