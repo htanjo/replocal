@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "test": "npm run lint && istanbul cover node_modules/mocha/bin/_mocha",
-    "lint": "jshint lib bin/replocal test",
+    "lint": "eslint lib bin/replocal test",
     "test-unit": "mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
@@ -42,9 +42,18 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "coveralls": "^2.11.4",
+    "eslint": "^1.10.3",
+    "eslint-config-xo": "^0.9.1",
     "istanbul": "^0.4.0",
-    "jshint": "^2.8.0",
     "mocha": "^2.3.3",
     "request": "^2.65.0"
+  },
+  "eslintConfig": {
+    "extends": "xo",
+    "rules": {
+      "indent": [2, 2, {"SwitchCase": 1}],
+      "brace-style": [2, "stroustrup", {"allowSingleLine": false}],
+      "padded-blocks": 0
+    }
   }
 }

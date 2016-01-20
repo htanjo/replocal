@@ -22,7 +22,7 @@ function exec(program) {
     silent: program.silent
   };
 
-  new Replocal(options);
+  new Replocal(options);    // eslint-disable-line no-new
 
 }
 

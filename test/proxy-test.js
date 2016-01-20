@@ -1,4 +1,5 @@
-/* jshint mocha: true */
+/* eslint-env mocha */
+/* eslint-disable no-unused-expressions */
 'use strict';
 
 var expect = require('chai').expect;
@@ -129,7 +130,8 @@ describe('Proxy server', function () {
   });
 
   it('connects with upstream proxy when "upstream" option given', function (done) {
-    var replocal, upstream;
+    var replocal;
+    var upstream;
     setup({
       hostname: 'example.com',
       docroot: 'test/fixtures',
@@ -172,6 +174,7 @@ describe('Proxy server', function () {
       });
     })
     .catch(function (error) {
+      /* eslint-disable max-nested-callbacks */
       upstream.close(function () {
         replocal.close(function () {
           done(error);
