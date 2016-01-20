@@ -180,6 +180,35 @@ describe('Proxy server', function () {
     });
   });
 
+  it('has network throttling when "network" option given', function (done) {
+    var replocal;
+    setup({
+      hostname: 'example.com',
+      docroot: 'test/fixtures',
+      network: '4g',
+      silent: true
+    })
+    .then(function (proxy) {
+      replocal = proxy;
+      return requestBody({
+        url: 'http://example.com/',
+        proxy: 'http://localhost:8888'
+      });
+    })
+    .then(function (body) {
+      expect(replocal._proxy.slow()).to.deep.equal({rate: 500000, latency: 300});
+      expect(body).to.equal('replaced');
+    })
+    .then(function () {
+      replocal.close(done);
+    })
+    .catch(function (error) {
+      replocal.close(function () {
+        done(error);
+      });
+    });
+  });
+
   it('prints some message when start', function (done) {
     var replocal;
     mute();
