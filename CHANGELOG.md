@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.0 (2016-01-21)
+- Add network throttling option: `--network <profile>`
+
 ## 0.2.0 (2015-11-26)
 - Support upstream proxy: `-u, --upstream <host:port>`
 
