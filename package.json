@@ -1,6 +1,6 @@
 {
   "name": "replocal",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Proxy for replacing web contents with local files.",
   "main": "lib",
   "bin": {
@@ -51,8 +51,20 @@
   "eslintConfig": {
     "extends": "xo",
     "rules": {
-      "indent": [2, 2, {"SwitchCase": 1}],
-      "brace-style": [2, "stroustrup", {"allowSingleLine": false}],
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "brace-style": [
+        2,
+        "stroustrup",
+        {
+          "allowSingleLine": false
+        }
+      ],
       "padded-blocks": 0
     }
   }
