@@ -75,7 +75,7 @@ $ replocal --port 9999 --upstream proxy:8080 --network 3g example.com path/to/do
 
 # Proxy server is running on localhost:9999
 #   Target website   : example.com
-#   Document root    : path/to/docroot
+#   Document root    : /Users/htanjo/path/to/docroot
 #   Upstream proxy   : proxy:8080
 #   Network throttle : 3G (750kb/s, 40ms RTT)
 ```
