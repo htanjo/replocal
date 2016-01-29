@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.1 (2016-01-29)
+- Display document root as absolute path.
+
 ## 0.3.0 (2016-01-21)
 - Add network throttling option: `--network <profile>`
 
