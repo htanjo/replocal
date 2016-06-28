@@ -43,7 +43,7 @@
     "chai": "^3.4.1",
     "coveralls": "^2.11.4",
     "eslint": "^2.10.1",
-    "eslint-config-xo": "^0.14.1",
+    "eslint-config-xo": "^0.15.2",
     "istanbul": "^0.4.0",
     "mocha": "^2.3.3",
     "request": "^2.65.0"
