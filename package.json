@@ -11,17 +11,17 @@
     "lib"
   ],
   "scripts": {
-    "test": "npm run lint && istanbul cover node_modules/mocha/bin/_mocha",
-    "lint": "eslint lib bin/replocal test",
-    "test-unit": "mocha",
+    "test": "npm run lint && npm run test-unit",
+    "lint": "eslint lib bin test",
+    "test-unit": "istanbul cover _mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "engines": {
-    "node": ">=0.12.0"
+    "node": ">=0.12"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/htanjo/replocal.git"
+    "url": "https://github.com/htanjo/replocal.git"
   },
   "keywords": [
     "proxy",
@@ -32,7 +32,7 @@
   "bugs": {
     "url": "https://github.com/htanjo/replocal/issues"
   },
-  "homepage": "https://github.com/htanjo/replocal#readme",
+  "homepage": "https://github.com/htanjo/replocal",
   "dependencies": {
     "chalk": "^1.1.1",
     "commander": "^2.9.0",
@@ -43,29 +43,12 @@
     "chai": "^3.4.1",
     "coveralls": "^2.11.4",
     "eslint": "^2.10.1",
-    "eslint-config-xo": "^0.15.2",
+    "eslint-config-xo-space": "^0.14.0",
     "istanbul": "^0.4.0",
     "mocha": "^2.3.3",
     "request": "^2.65.0"
   },
   "eslintConfig": {
-    "extends": "xo",
-    "rules": {
-      "indent": [
-        2,
-        2,
-        {
-          "SwitchCase": 1
-        }
-      ],
-      "brace-style": [
-        2,
-        "stroustrup",
-        {
-          "allowSingleLine": false
-        }
-      ],
-      "padded-blocks": 0
-    }
+    "extends": "xo-space"
   }
 }

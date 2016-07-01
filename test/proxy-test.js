@@ -37,8 +37,7 @@ function requestBody(options) {
     request(options, function (error, response, body) {
       if (!error && response.statusCode === 200) {
         resolve(body);
-      }
-      else {
+      } else {
         reject(new Error('Could not get response'));
       }
     });
@@ -46,7 +45,6 @@ function requestBody(options) {
 }
 
 describe('Proxy server', function () {
-
   it('replaces response body with local file', function (done) {
     var replocal;
     setup({
@@ -272,5 +270,4 @@ describe('Proxy server', function () {
       });
     });
   });
-
 });
