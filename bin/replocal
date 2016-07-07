@@ -7,7 +7,6 @@ var Replocal = require('../lib');
 var pkg = require('../package.json');
 
 function exec(program) {
-
   if (!program.args.length) {
     console.error(chalk.red('No <hostname> specified'));
     program.help();
@@ -23,7 +22,6 @@ function exec(program) {
   };
 
   new Replocal(options);    // eslint-disable-line no-new
-
 }
 
 program

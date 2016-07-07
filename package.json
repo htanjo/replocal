@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "test": "npm run lint && npm run test-unit",
-    "lint": "eslint lib bin test",
+    "lint": "eslint lib 'bin/*' test",
     "test-unit": "istanbul cover _mocha",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
