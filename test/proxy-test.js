@@ -197,7 +197,7 @@ describe('Proxy server', function () {
       });
     })
     .then(function (body) {
-      expect(replocal._proxy.slow()).to.deep.equal({rate: 500000, latency: 300});
+      expect(replocal._proxy.slow()).to.deep.equal({rate: 500000, latency: 20});
       expect(body).to.equal('replaced');
     })
     .then(function () {
