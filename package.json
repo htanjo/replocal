@@ -17,7 +17,7 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
   "engines": {
-    "node": ">=0.12"
+    "node": ">=4"
   },
   "repository": {
     "type": "git",
@@ -50,10 +50,5 @@
   },
   "eslintConfig": {
     "extends": "xo-space"
-  },
-  "greenkeeper": {
-    "ignore": [
-      "eslint"
-    ]
   }
 }
