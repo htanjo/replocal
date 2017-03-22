@@ -2,7 +2,7 @@
 
 ## 1.0.0 (2017-03-22)
 - Update suppoted Node.js versions according to [LTS schedule](https://github.com/nodejs/LTS).
-  - Support Node.js 7.
+  - Support Node.js 6 and 7.
   - Unsupport Node.js 0.12 and 5.
 - Fix network throttling config.
 
