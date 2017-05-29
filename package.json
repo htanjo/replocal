@@ -40,7 +40,7 @@
     "lodash.merge": "^4.0.1"
   },
   "devDependencies": {
-    "chai": "^3.4.1",
+    "chai": "^4.0.0",
     "coveralls": "^2.11.4",
     "eslint": "^3.18.0",
     "eslint-config-xo-space": "^0.16.0",
